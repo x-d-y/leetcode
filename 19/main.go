@@ -1,9 +1,9 @@
 package main
 
-func  main(){
-	l := CreateList([]int{1,2})
-	removeNthFromEnd(l ,2)
-}
+//func  main(){
+//	l := CreateList([]int{1,2})
+//	removeNthFromEnd(l ,2)
+//}
 
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
