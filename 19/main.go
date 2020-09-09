@@ -1,8 +1,8 @@
 package main
 
 func  main(){
-	l := CreateList([]int{1})
-	removeNthFromEnd(l ,1)
+	l := CreateList([]int{1,2})
+	removeNthFromEnd(l ,2)
 }
 
 
