@@ -1,9 +1,6 @@
 package main
 
-func  main(){
-	l := CreateList([]int{1,2})
-	removeNthFromEnd(l ,2)
-}
+
 
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
@@ -14,13 +11,11 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 	last := head
 	fast := head
 	slow := head
-	delete := head
 	index := 0
 	for {
 		fast = fast.Next
 
 		if fast ==nil{
-			delete = slow
 			break
 		}
 		if index>=n-1{
@@ -28,19 +23,15 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 			slow = slow.Next
 		}
 		if fast.Next == nil{
-			delete = slow
 			break
 		}
 
 		index++
 	}
-	//fmt.Println(delete)
-	if last == delete{
-		return nil
+	if head == slow{
+		return head.Next
 	}
-	if head == delete{
-		return last.Next
-	}
+
 	last.Next = slow.Next
 	return head
 }
