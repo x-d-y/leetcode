@@ -1,8 +1,8 @@
 package main
 
-func main(){
-	 combine(4, 2)
-}
+//func main(){
+//	 combine(4, 2)
+//}
 
 var array [][]int
 func combine(n int, k int) [][]int {
