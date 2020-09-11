@@ -1,12 +1,5 @@
 package main
 
-import "fmt"
-
-func main(){
-	a := combinationSum([]int{2,3,5}, 8)
-	fmt.Println(a)
-}
-
 var a [][]int
 
 func  combinationSum(candidates []int, target int) [][]int {
