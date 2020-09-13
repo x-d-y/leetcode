@@ -21,7 +21,6 @@ func exist(board [][]byte, word string) bool {
 	if len(board)==0{
 		return false
 	}
-
 	vis = [][]bool{}
 	for i := range board{
 		s := make([]bool,len(board[i]))
