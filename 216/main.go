@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
-func main(){
-	fmt.Println(combinationSum3(10, 50))
-}
+//func main(){
+//	fmt.Println(combinationSum3(10, 50))
+//}
 
 var g [][]int
 
