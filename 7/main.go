@@ -1,11 +1,9 @@
 package main
 
-import "fmt"
-
-func main(){
-	r := reverse(120)
-	fmt.Println(r)
-}
+//func main(){
+//	r := reverse(120)
+//	fmt.Println(r)
+//}
 
 func reverse(x int) int {
 	var n int64
