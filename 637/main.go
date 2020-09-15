@@ -1,16 +1,15 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
 
 
-func main()  {
-	root := CreateNodeTree([]string{"1","2","3"})
-	fmt.Println(averageOfLevels(root))
-}
+//func main()  {
+//	root := CreateNodeTree([]string{"1","2","3"})
+//	fmt.Println(averageOfLevels(root))
+//}
 
 func averageOfLevels(root *TreeNode) (ga []float64) {
 	var curNodes []*TreeNode
