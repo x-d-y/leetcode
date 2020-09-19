@@ -4,38 +4,31 @@ import (
 	"fmt"
 	"strconv"
 )
-//
-//func main(){
-//	root := CreateNodeTree([]string{"4","2","7","1","3","6","9"})
-//	invertTree(root)
-//	fmt.Println(root)
-//}
+
+func main(){
+	root := CreateNodeTree([]string{"1","2","3","4","5"})
+	fmt.Println(sumOfLeftLeaves(root))
+
+}
+
+func sumOfLeftLeaves(root *TreeNode) int {
+	return r(root,0)
+}
 
 
-func invertTree(root *TreeNode) *TreeNode {
+func r(root *TreeNode,sum int) int{
 	if root == nil{
-		return root
+		return sum
 	}
-	r(root)
-	return root
+	if root.Left !=nil&&root.Left.Left==nil&&root.Left.Right==nil{
+		sum += root.Left.Val
+	}
+	sum = r(root.Left,sum)
+	sum = r(root.Right,sum)
+	return sum
 }
 
-func r(root *TreeNode){
 
-
-	if root.Left == nil && root.Right == nil{
-		return
-	}
-
-	if root.Left != nil{
-		r(root.Left)
-	}
-	if root.Right != nil{
-		r(root.Right)
-	}
-	root.Left ,root.Right = root.Right,root.Left
-	return
-}
 
 
 type TreeNode struct {
@@ -74,5 +67,6 @@ func CreateNodeTree(a []string)*TreeNode{
 	}
 	return root
 }
+
 
 
