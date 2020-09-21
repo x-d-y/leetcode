@@ -1,15 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
-func main(){
-	root := CreateNodeTree([]string{"1","2","3","4","5"})
-	fmt.Println(sumOfLeftLeaves(root))
-
-}
+//func main(){
+//	root := CreateNodeTree([]string{"1","2","3","4","5"})
+//	fmt.Println(sumOfLeftLeaves(root))
+//
+//}
 
 func sumOfLeftLeaves(root *TreeNode) int {
 	return r(root,0)
