@@ -31,8 +31,6 @@ func maxProfit(prices []int) int {
 	sell_1, sell_2 := 0, 0
 	buy_0, buy_1 := math.MinInt64, -prices[0]
 	for i := 2; i <= len(prices); i++ {
-		//buy_2, buy_1, buy_0 = max(buy_1, sell_0-prices[i-1]), buy_2, buy_1
-
 		buy_1, buy_0 = max(buy_1, sell_1-prices[i-1]), buy_1
 		sell_2, sell_1 = max(sell_2, prices[i-1]+buy_0), sell_2
 	}
